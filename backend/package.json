@@ -1,0 +1,67 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "app.ts",
+  "repository": "git@github.com:ESP-SmartEats/backend.git",
+  "author": "hienpham512 <thi-hien.pham@epitech.eu>",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "nodemon --exec ts-node --ignore secret.json src/app.ts",
+    "lint": "eslint 'src/**/*.ts'",
+    "lint:fix": "eslint --fix 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.{ts,js,json}'",
+    "commit": "git-cz",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage --passWithNoTests"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@hienpham512/smarteats": "1.7.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.19",
+    "@types/firebase": "^3.2.1",
+    "@types/node": "^20.8.4",
+    "@types/swagger-ui-express": "^4.1.6",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.7.5",
+    "axios": "^1.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.0.1",
+    "express": "^4.18.2",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
+    "nodemon": "^3.0.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/jest": "^29.5.5",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "commitizen": "^4.3.0",
+    "cz-customizable": "^7.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "lint-staged": "^14.0.1",
+    "prettier": "^3.0.3",
+    "ts-jest": "^29.1.1",
+    "ts-node-esm": "^0.0.6"
+  },
+  "lint-staged": {
+    "*.{ts,js,json}": [
+      "yarn lint:fix",
+      "yarn test"
+    ]
+  }
+}

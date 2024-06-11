@@ -1,0 +1,38 @@
+{
+  "name": "@hienpham512/smarteats",
+  "version": "1.7.2",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ESP-SmartEats/types.git"
+  },
+  "author": "hienpham512 <thi-hien.pham@epitech.eu>",
+  "license": "MIT",
+  "type": "commonjs",
+  "main": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.0.4"
+  },
+  "scripts": {
+    "build": "tsc --isolatedModules"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "description": "[![npm version](https://img.shields.io/npm/v/my-npm-library.svg)](https://www.npmjs.com/package/@hienpham512/smarteats)",
+  "bugs": {
+    "url": "https://github.com/ESP-SmartEats/types/issues"
+  },
+  "homepage": "https://github.com/ESP-SmartEats/types#readme",
+  "devDependencies": {}
+}
